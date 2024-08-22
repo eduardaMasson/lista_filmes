@@ -22,10 +22,10 @@
      <section class="tabela">
          <ul>
             {% for filme in filmes %}
-            <li class="listac">{{ filme[1] }} - {{ filme[2] }} - {{ filme[3] }} - {{ filme[4] }} - {{ filme[5] }} <!-- Exibe as informações do contato, incluindo o nome, número de telefone e email. Se for favorito, adiciona um marcador -->
+            <li class="listac">{{ filme[1] }} - {{ filme[2] }} - {{ filme[3] }} - {{ filme[4] }} - {{ filme[5] }} <!-- Exibe as informações do filme, incluindo o nome, gênero, data de lançamento e duração. -->
                 <ul>
-                    <li><a href="/editar_filme/{{ loop.index0 }}">Editar</a></li> <!-- Link para editar o contato -->
-                    <li><a href="/apagar_filme/{{ loop.index0 }}">Apagar</a></li> <!-- Link para apagar o contato -->
+                    <li><a href="/editar_filme/{{ loop.index0 }}">Editar</a></li> <!-- Link para editar o filme -->
+                    <li><a href="/apagar_filme/{{ loop.index0 }}">Apagar</a></li> <!-- Link para apagar o filme -->
                 </ul>
             </li>
             {% endfor %}
