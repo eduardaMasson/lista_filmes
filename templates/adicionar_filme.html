@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/estilo.css">
+    <title>Lista de filmes</title>
+</head>
+<body>
+ <!-- Início do Cabeçalho -->
+    <header>
+        <div>
+            <img class="logo" src="static/img/filme.png" alt="Logo da lista de sugestão de filmes">
+        </div>
+        <div class="titulo">
+            <h1>LISTA DE FILMES</h1>
+        </div>
+    </header>
+    <!-- fim do cabeçalho -->
+        <h2>ADICIONAR FILMES</h2>
+      <center>
+        <form action="/adicionar_filme" method="POST"> <!-- Formulário para adicionar um novo filme. O 'action' indica para onde os dados do formulário serão enviados e o 'method' indica o método HTTP usado (neste caso, POST) -->
+            <div class="coolinput">
+                <label for="nomefilme" class="text">Nome do filme: </label>
+                <input type="text" placeholder="Digite aqui" id="nomefilme" name="nome" class="input">
+            </div>
+            <div class="coolinput">
+                <label for="lancamento" class="text">Lançamento: </label>
+                <input type="text" placeholder="Digite aqui" id="lancamento" name="lancamento" class="input">
+            </div>
+            <div class="coolinput">
+                <label for="genero" class="text">Gênero: </label>
+                <input type="text" placeholder="Digite aqui" id="genero" name="genero" class="input">
+            </div>
+            <div class="coolinput">
+                <label for="duracao" class="text">Duração: </label>
+                <input type="text" placeholder="Digite aqui" id="duracao" name="duracao" class="input">
+            </div>
+            <br><br>
+            <button class="adicionar" type="submit" value="Adicionar"><span>Adicionar</span></button><br><br>
+        </form>
+    </center>
+
+ <!-- rodapé -->
+ <center>
+     <footer>
+        <p class="rodape">© 2024. Todos os direitos reservados.</p>
+    </footer>
+ </center>
+<!-- fim do rodapé -->
+</body>
+</html>

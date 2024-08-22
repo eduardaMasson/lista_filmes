@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/estilo.css">
+    <title>Lista de filmes</title>
+</head>
+<body>
+ <!-- Início do Cabeçalho -->
+    <header>
+        <div>
+            <img class="logo" src="static/img/filme.png" alt="Logo da lista de sugestão de filmes">
+        </div>
+        <div class="titulo">
+            <h1>LISTA DE FILMES</h1>
+        </div>
+    </header>
+    <!-- fim do cabeçalho -->
+ <center>
+           <!--  início das rotas -->
+     <section class="tabela">
+         <ul>
+            {% for filme in filmes %}
+            <li class="listac">{{ filme[1] }} - {{ filme[2] }} - {{ filme[3] }} - {{ filme[4] }} - {{ filme[5] }} <!-- Exibe as informações do contato, incluindo o nome, número de telefone e email. Se for favorito, adiciona um marcador -->
+                <ul>
+                    <li><a href="/editar_filme/{{ loop.index0 }}">Editar</a></li> <!-- Link para editar o contato -->
+                    <li><a href="/apagar_filme/{{ loop.index0 }}">Apagar</a></li> <!-- Link para apagar o contato -->
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+            <a href="/adicionar_filme">
+                <button class="adicionar">
+                  <span aria-hidden="true">
+                  </span>
+                  <span>ADICIONAR FILME</span>
+                </button>
+            </a>
+    </section>
+     <br /><br/>
+            </section>
+ </center>
+
+ <!-- rodapé -->
+ <center>
+     <footer>
+        <p class="rodape">© 2024. Todos os direitos reservados.</p>
+    </footer>
+ </center>
+<!-- fim do rodapé -->
+</body>
+</html>

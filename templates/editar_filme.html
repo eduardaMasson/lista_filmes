@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/estilo.css">
+    <title>Lista de filmes</title>
+</head>
+<body>
+ <!-- Início do Cabeçalho -->
+    <header>
+        <div>
+            <img class="logo" src="static/img/filme.png" alt="Logo da lista de sugestão de filmes">
+        </div>
+        <div class="titulo">
+            <h1>LISTA DE FILMES</h1>
+        </div>
+    </header>
+    <!-- fim do cabeçalho -->
+        <h2>EDITAR FILMES</h2>
+            <center><br><br>
+                <form action="/editar_filme/{{ filme[0] }}" method="POST">
+                <div class="coolinput">
+                    <label for="nomefilme" class="text">Nome do filme: </label> <!-- Rótulo e campo de entrada para o nome do contato -->
+                    <input type="text" placeholder="Digite aqui" id="nomefilme" name="nome" value = "{{filme[1]}}" class="input"> <!-- Campo de entrada para o nome do contato -->
+                </div>
+                <div class="coolinput">
+                    <label for="lancamento" class="text">Lançamento:</label>
+                    <input type="text" placeholder="Digite aqui" id="lancamento" name="lancamento" value = "{{filme[2]}}" class="input">
+                </div>
+                <div class="coolinput">
+                    <label for="genero" class="text">Gênero: </label>
+                    <input type="text" placeholder="Digite aqui" id="genero" name="genero" value = "{{filme[3]}}" class="input">
+                </div>
+                <div class="coolinput">
+                    <label for="duracao" class="text">Duração: </label>
+                    <input type="text" placeholder="Digite aqui" id="duracao" name="duracao" value = "{{filme[4]}}" class="input">
+                </div>
+                    </br></br>
+                    <button class="adicionar" type="submit" value="Salvar"><span>Salvar</span></button><br><br>
+                </form>
+              </center>
+</body>
+</html>
